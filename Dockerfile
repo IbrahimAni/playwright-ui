@@ -12,5 +12,8 @@ RUN npm install
 # Copy the rest of the application code
 COPY . .
 
+# Install Playwright browsers
+RUN npx playwright install
+
 # Run the tests
-CMD ["npm", "test"]
+CMD ["npx", "playwright", "test"]

@@ -15,5 +15,8 @@ COPY . .
 # Install Playwright browsers
 RUN npx playwright install
 
+# Expose the port your app runs on
+EXPOSE 3000
+
 # Run the tests
-CMD ["npx", "playwright", "test"]
+CMD ["npm", "test"]

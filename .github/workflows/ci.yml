@@ -20,4 +20,4 @@ jobs:
       run: docker build -t my-app:test .
 
     - name: Run tests in Docker container
-      run: docker run my-app:test
+      run: docker run -e CI=true my-app:test
